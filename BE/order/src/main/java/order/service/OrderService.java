@@ -23,12 +23,22 @@ public class OrderService {
 	
 	@Autowired
 	OrderRepo orderRepo;
+//	@Autowired
+//	Order order;
 	//@Autowired OrderList orderList;
 	public List<OrderResponse> getOrder(String id){
 		System.out.println("OrderService.getOrder()");
 		OrderList orderList = new OrderList();
 		List<OrderResponse>  res = orderRepo.getOrder(id);
 		return res;
+	}
+	
+	public String addOrder(OrderDto req) {
+		
+		
+		
+		return "";
+		
 	}
 
 }

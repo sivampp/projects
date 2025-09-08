@@ -1,5 +1,5 @@
 
-package order.model;
+package com.emp.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -16,21 +16,21 @@ import lombok.Setter;
 **/
 
 @Data
-//@Getter
-//@Setter
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class OrderDto {
+public class UserDao {
 	
 	@JsonProperty("id")
 	private Integer id;
-	@JsonProperty("item")
-	private String item;
-	@JsonProperty("item_desc")
-	private String item_desc;
-	@JsonProperty("price")
-	private Double price;
+	@JsonProperty("name")
+	private String name;
+	@JsonProperty("password")
+	private String password;
+	@JsonProperty("role")
+	private String role;
 
 }
 

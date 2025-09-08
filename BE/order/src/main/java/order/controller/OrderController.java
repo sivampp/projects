@@ -16,6 +16,7 @@ import org.springframework.http.MediaType;
 
 import jakarta.websocket.server.PathParam;
 import order.model.Order;
+import order.model.OrderDto;
 import order.model.OrderResponse;
 import order.repository.OrderRepo;
 import order.service.OrderService;
@@ -37,7 +38,12 @@ public class OrderController {
 	
 	@PostMapping("/add")
 	public void addOrder(@RequestBody Order order) {
+		System.out.println(order);
+		
+		//service.addOrder(order);
+		
 		orderRepo.save(order);
+		
 		
 	}
 	

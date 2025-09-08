@@ -3,6 +3,7 @@ package order;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;
@@ -14,7 +15,7 @@ import java.lang.management.MemoryUsage;
 
 @SpringBootApplication
 @EnableCaching
-
+@ComponentScan("order")
 //@Bean
 //CacheManager cacheManager() {
 //    // configure and return an implementation of Spring's CacheManager SPI
